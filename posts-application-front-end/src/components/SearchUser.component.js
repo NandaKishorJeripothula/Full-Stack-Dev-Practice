@@ -31,7 +31,6 @@ export default class SearchUser extends Component {
             return false;
         });
         this.setState({ usersData: this.state.usersData.concat(usersData) });
-        console.log(usersData);
     }
     //Methods Related to the AutoSuggest Content
     onChange = (event, { newValue, method }) => {

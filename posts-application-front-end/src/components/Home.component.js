@@ -32,9 +32,7 @@ export default class Home extends Component {
             this.setState({ errorMessage: err });
             return false;
         });
-        //console.log(postsData)
         this.setState({ postsData: this.state.postsData.concat(postsData) })
-        // console.log("updated states\n", this.state.postsData)
     }
 
     componentDidMount() {
@@ -45,7 +43,7 @@ export default class Home extends Component {
         let postsLoader;
         if (this.state.postsData.length !== 0) {
             postsLoader = this.state.postsData.map((element, i) => (
-                < PostListViewCard key={i} data={element} />
+                <PostListViewCard key={i} data={element} />
             ))
         }
         return (

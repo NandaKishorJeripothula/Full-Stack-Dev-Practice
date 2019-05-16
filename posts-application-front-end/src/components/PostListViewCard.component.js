@@ -46,8 +46,6 @@ export default class PostListViewCard extends Component {
         if (this.state.userData !== null) {
             userName = this.state.userData[0].username;
         }
-        // console.log(this.state);
-        console.log(this.state.userData);
         return (
             <Link to={{ pathname: '/postView', state: this.state }}>
                 <div className="PostListViewCard">
