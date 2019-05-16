@@ -31,14 +31,14 @@ export default class PostComments extends Component {
         console.log(commentsData);
     }
     componentDidMount() {
-        console.log("Commetns " + this.state + "Props" + this.props.postId);
+        // console.log("Commetns " + this.state + "Props" + this.props.postId);
         this.getCommets();
     }
     render() {
         let commentLoader;
         if (this.state.commentsData.length !== 0) {
             commentLoader = this.state.commentsData.map((element, i) => (
-                <div className="Comments">
+                <div className="Comments" key={i}>
                     <h5>{"Subject : " + element.name}</h5>
                     <p>{"Commented By : " + element.email}</p>
                     <p>{element.body}</p>

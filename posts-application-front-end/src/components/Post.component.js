@@ -7,7 +7,7 @@ export default function Post(props) {
         <div className="container">
             <h2>{data.title}</h2>
             <Link to={{ pathname: '/userView', state: data.userData }} >
-                <h5 >{"- " + data.userData[0].username}</h5 >
+                {"- " + data.userData[0].username}
             </Link>
             <p>{data.body}</p>
             <PostComments postId={data.id} />

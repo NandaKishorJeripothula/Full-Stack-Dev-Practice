@@ -35,9 +35,7 @@ export default class Home extends Component {
         this.setState({ postsData: this.state.postsData.concat(postsData), lastPostId: this.state.lastPostId + this.state.postsLimit })
 
     }
-    loadMore = () => {
-        this.fetchPosts()
-    }
+
     componentDidMount() {
         this.fetchPosts();
     }
