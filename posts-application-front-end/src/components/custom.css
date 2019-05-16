@@ -1,0 +1,12 @@
+.PostListViewCard {
+  position: relative; /* Position the background text */
+  bottom: 0; /* At the bottom. Use top:0 to append it to the top */
+  background: rgba(0, 0, 0, 0.4); /* Black background with 0.5 opacity */
+  color: #f1f1f1; /* Grey text */
+  width: 90%; /* Full width */
+  padding: 4px; /* Some padding */
+  margin-top: 5px;
+  height: 80px;
+  font-weight: 200;
+  line-height: 20%;
+}

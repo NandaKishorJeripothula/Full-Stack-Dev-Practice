@@ -1,0 +1,29 @@
+{
+  "name": "auth-service-back-end",
+  "version": "1.0.0",
+  "description": "NodeApplication to utilize Oauth service and whitelist users",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NandaKishorJeripothula/Full-Stack-Dev-Practice.git"
+  },
+  "keywords": [
+    "node",
+    "nodejs",
+    "mongodb",
+    "auth",
+    "Oauth",
+    "whitelisting",
+    "users"
+  ],
+  "author": "Nanda Kishor Jeripothula",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NandaKishorJeripothula/Full-Stack-Dev-Practice/issues"
+  },
+  "homepage": "https://github.com/NandaKishorJeripothula/Full-Stack-Dev-Practice#readme"
+}
