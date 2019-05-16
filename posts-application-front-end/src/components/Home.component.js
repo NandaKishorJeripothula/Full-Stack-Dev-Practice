@@ -32,9 +32,12 @@ export default class Home extends Component {
             this.setState({ errorMessage: err });
             return false;
         });
-        this.setState({ postsData: this.state.postsData.concat(postsData) })
-    }
+        this.setState({ postsData: this.state.postsData.concat(postsData), lastPostId: this.state.lastPostId + this.state.postsLimit })
 
+    }
+    loadMore = () => {
+        this.fetchPosts()
+    }
     componentDidMount() {
         this.fetchPosts();
     }
@@ -52,6 +55,7 @@ export default class Home extends Component {
                 <h5>{this.state.errorMessage}</h5>
                 <h3>Posts</h3>
                 {postsLoader}
+                <button value="LoadMore " className="btn btn-primary" onClick={() => this.fetchPosts()} >LoadMore</button>
             </div >
         )
     }

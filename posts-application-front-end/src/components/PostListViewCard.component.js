@@ -50,11 +50,13 @@ export default class PostListViewCard extends Component {
             <Link to={{ pathname: '/postView', state: this.state }}>
                 <div className="PostListViewCard">
                     <h4>{this.state.title}</h4>
-                    <Link to={{ pathname: '/userView', state: this.state.userData }} >
-                        <h5 style={{ float: "right" }}>{"- " + userName}</h5 >
+                    <Link to={{ pathname: '/userView', state: this.state.userData }} componentClass='span'>
+                        <h5 style={{ float: "right" }}>
+                            {"- " + userName}
+                        </h5 >
                     </Link>
                 </div >
-            </Link>
+            </Link >
         )
     }
 }
