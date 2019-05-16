@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>HuddlAI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <input type="button" id="signinButton" value="Signin With Github" />
+    <script>
+      window.onload = async e => {
+        var gURL = "";
+        var uri = "http://localhost:8080/getURL";
+        var options = {
+          method: "GET"
+        };
+        await fetch(uri, options)
+          .then(resp => {
+            if (resp.status === 200) {
+              return resp.json();
+            }
+          })
+          .then(resp => {
+            gURL = resp.url;
+            console.log(gURL);
+          })
+          .catch();
+        var button = document.getElementById("signinButton");
+
+        button.addEventListener("click", () => {
+          window.location.replace(gURL);
+        });
+      };
+    </script>
+  </body>
+</html>
